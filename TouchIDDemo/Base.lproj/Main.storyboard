@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TCL-jg-kaB">
+                                <rect key="frame" x="0.0" y="120" width="600" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="指纹解锁" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ps-Mg-1y3">
+                                        <rect key="frame" x="10" y="5" width="80" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="aDS-Zd-BlM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rHj-2F-t4v">
+                                        <rect key="frame" x="540" y="5" width="52" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="Ahl-g1-5q0"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="switchClick:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ttt-zT-PfJ"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="1ps-Mg-1y3" secondAttribute="bottom" constant="5" id="Do9-Nz-YDF"/>
+                                    <constraint firstAttribute="bottom" secondItem="rHj-2F-t4v" secondAttribute="bottom" constant="5" id="NYQ-7l-W44"/>
+                                    <constraint firstItem="1ps-Mg-1y3" firstAttribute="leading" secondItem="TCL-jg-kaB" secondAttribute="leading" constant="10" id="OR4-I0-xtJ"/>
+                                    <constraint firstItem="1ps-Mg-1y3" firstAttribute="top" secondItem="TCL-jg-kaB" secondAttribute="top" constant="5" id="Rcp-SN-FI9"/>
+                                    <constraint firstAttribute="height" constant="40" id="ThF-A8-7Td"/>
+                                    <constraint firstItem="rHj-2F-t4v" firstAttribute="top" secondItem="TCL-jg-kaB" secondAttribute="top" constant="5" id="VaY-lq-HSJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="rHj-2F-t4v" secondAttribute="trailing" constant="10" id="hxy-X2-y1Z"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="TCL-jg-kaB" secondAttribute="trailing" id="IdJ-kX-vd7"/>
+                            <constraint firstItem="TCL-jg-kaB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="oGP-YO-IyE"/>
+                            <constraint firstItem="TCL-jg-kaB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="zSy-cn-1LZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="touchSwitch" destination="rHj-2F-t4v" id="S3y-rI-LJ5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="371" y="381"/>
+        </scene>
+    </scenes>
+</document>
