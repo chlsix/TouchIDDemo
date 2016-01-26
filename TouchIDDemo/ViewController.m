@@ -48,6 +48,7 @@
                 localizedReason:@"指纹验证"
                           reply:^(BOOL success, NSError * _Nullable error) {
                               if (success) {
+                                  //验证成功执行
                                   NSLog(@"指纹识别成功");
                                   //在主线程刷新view，不然会有卡顿
                                   dispatch_async(dispatch_get_main_queue(), ^{
@@ -57,10 +58,13 @@
                                   });
                               } else {
                                   if (error.code == kLAErrorUserFallback) {
+                                      //Fallback按钮被点击执行
                                       NSLog(@"Fallback按钮被点击");
                                   } else if (error.code == kLAErrorUserCancel) {
+                                      //取消按钮被点击执行
                                       NSLog(@"取消按钮被点击");
                                   } else {
+                                      //指纹识别失败执行
                                       NSLog(@"指纹识别失败");
                                   }
                                   dispatch_async(dispatch_get_main_queue(), ^{
